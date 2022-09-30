@@ -30,30 +30,8 @@ namespace Tema2_Opacidad
 
         private void IsMouseDirectlyOverChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
-            if(imagen1.IsMouseOver)
-            {
-                imagen1.Opacity = 1;
-            }
-            else
-            {
-                imagen1.Opacity = 0.5;
-            }
-            if (imagen2.IsMouseOver)
-            {
-                imagen2.Opacity = 1;
-            }
-            else
-            {
-                imagen2.Opacity = 0.5;
-            }
-            if (imagen3.IsMouseOver)
-            {
-                imagen3.Opacity = 1;
-            }
-            else
-            {
-                imagen3.Opacity = 0.5;
-            }
+            if((sender as Image).IsMouseOver) (sender as Image).Opacity = 1;
+            else (sender as Image).Opacity = 0.5;
         }
     }
 }
